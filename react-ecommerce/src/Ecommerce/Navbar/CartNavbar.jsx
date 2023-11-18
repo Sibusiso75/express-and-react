@@ -1,8 +1,8 @@
 import React from "react";
-import { useGlobalContext } from "./ContextAndReducer/cartContext";
+import { useGlobalContext } from "../ContextAndReducer/cartContext";
 // import { FaShoppingBag, FaHome, FaTasks } from "react-icons/fa";
 
-import "./cart.css";
+import "../cart.css";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {

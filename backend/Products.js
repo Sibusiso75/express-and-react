@@ -75,7 +75,7 @@ const cartItems = [
 
 
     },{
-      id: 8,
+      id: 7,
       title: "HP 250 G9 15.6",
       details: "Celeron, 8GB RAM, 256GB SSD, Win 11 Home ",
       price: 6329.00,
@@ -87,7 +87,7 @@ const cartItems = [
 
 
     },{
-      id: 9,
+      id: 8,
       title: "HP Laser 107a Printer – 4ZB77A",
       details: "128Gb - Blue",
       price: 3289.00,
@@ -99,7 +99,7 @@ const cartItems = [
 
 
     },{
-      id: 10,
+      id: 9,
       title: "HP OfficeJet Pro",
       details: "7720 Wide Format All-in-One Printer, 128Gb - Blue",
       price:  4839.00,
@@ -112,7 +112,7 @@ const cartItems = [
 
     },
     {
-      id: 12,
+      id: 10,
       title: "Samsung 870 EVO ",
       details: "250GB Solid State Drive",
       price:  709.00,

@@ -65,13 +65,11 @@ function Home() {
         </div>
       </div>
       <br />
-        <div className="btns" disabled={item.itemAdded}  onClick={()=>addToCart(item.id)} >
         
 
-        <button disabled={item.itemAdded}  onClick={()=>addToCart(item.id)}  style={{ color: "white" }}>
+        <button className="btns" disabled={item.itemAdded}  onClick={()=>addToCart(item.id)} >
           Add to cart
         </button>
-      </div>
      
 
       

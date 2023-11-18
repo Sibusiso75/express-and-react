@@ -7,8 +7,9 @@ function Item(){
     const {id} = useParams()
     let navigate = useNavigate()
     const {items, addToCart} = useGlobalContext()
-   
-      
+     
+     
+    
     return <div>
       <button onClick={()=>navigate("/")}
       style={{ margin:"10px",background:"green", color:"white", padding:"5px"}}
@@ -24,16 +25,25 @@ function Item(){
                
                 >
                      <div>
+                     <span className="previousAndNext" onClick={()=>navigate(`/item/${item.id<=1?
+        items.length:item.id>items.length?1:item.id-1}`)}>
+        ⬅
+      </span>
         <img
           src={item.image}
           alt={item.title}
           style={{ width: "150px", height: "150px" }}
         />
-
+          <span className="previousAndNext" onClick={()=>navigate(`/item/${item.id<1?
+        items.length:item.id>items.length-1?1:item.id+1}`)}>
+        ➡
+      </span>
         <div className="itemsAndButtons">
+       
           <main> {item.title}</main>
           <main>{item.details}</main>
           <main>Price - R{item.price}</main>
+        
         </div>
        
         
@@ -42,8 +52,9 @@ function Item(){
           Add to cart
         </button>
       </div>
-      
-      <br />
+   
+     
+     
 
                 </div>
             })
@@ -51,7 +62,7 @@ function Item(){
         
         </div>
        
-
+       
     </div>
 }
 export default Item
