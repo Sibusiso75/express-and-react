@@ -6,9 +6,9 @@ const cors = require("cors")
 app.use(cors())
 
 
-app.get("/", (req, res)=>{
+app.get("https://ecommerce-products-9qke.onrender.com", (req, res)=>{
     res.json(cartItems)
 })
 
 
-app.listen(5000)
+app.listen(5000 || "https://ecommerce-products-9qke.onrender.com")
