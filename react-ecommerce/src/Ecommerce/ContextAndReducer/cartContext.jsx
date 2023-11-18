@@ -20,7 +20,7 @@ JSON.parse(localStorage.getItem("items")): []
     loading: true,
     
   };
-  const url = "https://ecommerce-products-9qke.onrender.com"
+  const url = "http://localhost:5000"
   const AppContext = createContext();
   function AppProvider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState);
