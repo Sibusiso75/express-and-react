@@ -1,14 +1,4 @@
 function reducer(state, action) {
-    // if (action.type === "CLEAR_CART") {
-    //   return { items:state.items.filter((item)=>item.itemAdded===false) };
-    // }
-    
-    
-  
-    if (action.type === "LOADING") {
-      return { ...state, loading: true };
-    }
-
     if(action.type==="ADD_TO_CART"){
       let tempitems = state.items.map((item) => {
         if (item.id === action.payload) {

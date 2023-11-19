@@ -7,20 +7,19 @@
 
   } from "react";
   import {toast} from "react-toastify"
-
+import cartItems from "../Products";
   import reducer from "./reducer"
   
   const storage = localStorage.getItem("items")?
 JSON.parse(localStorage.getItem("items")): []
 
   const initialState = {
-    items:[],
+    items:cartItems,
     total: 0,
     amount: 0,
-    loading: true,
+    
     
   };
-  const url = "https://ecommerce-products-9qke.onrender.com"
 
   const AppContext = createContext();
   function AppProvider({ children }) {
@@ -47,30 +46,8 @@ JSON.parse(localStorage.getItem("items")): []
     }
     function decrease(id){
       dispatch({ type: "DECREASE", payload:id});
-
     }
-  
     
-   
-     
-    
-        
-    
-  
-    async function fetchData() {
-      dispatch({ type: "LOADING" });
-      const response = await fetch(url);
-      const items = await response.json();
-      dispatch({ type: "DISPAY_ITEMS", payload: items });
-      console.log(items);
-      
-    }
-    useEffect(() => {
-
-      fetchData();
-    }, []);
-    
-
     useEffect(()=>{
       dispatch({type:"TOTALS"})
     },[state.items])
