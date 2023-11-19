@@ -199,6 +199,9 @@ body {
        
 
      }
+     .previousAndNext {
+        padding-bottom:10px;
+     }
      .previousAndNext:hover{
         cursor: pointer;
     }
@@ -485,6 +488,10 @@ cursor: pointer;
     }
     .previousAndNext:hover{
         cursor: pointer;
+    }
+    .previousAndNext{
+        margin:10px;
+        
     }
     .cartContainer{
         display: flex;

@@ -14,13 +14,15 @@
 JSON.parse(localStorage.getItem("items")): []
 
   const initialState = {
-    items:storage,
+    items:[],
     total: 0,
     amount: 0,
     loading: true,
     
   };
-  const url = "http://localhost:5000"
+  // const url = "https://ecommerce-products-9qke.onrender.com"
+    const url = "http://localhost:5000"
+
   const AppContext = createContext();
   function AppProvider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState);

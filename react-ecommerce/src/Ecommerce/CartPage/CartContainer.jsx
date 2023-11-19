@@ -3,6 +3,8 @@ import { useGlobalContext } from "../ContextAndReducer/cartContext";
 import {  useNavigate } from "react-router-dom";
 // import Categories from "./Categories";
 import "../cart.css";
+import {FaPlusCircle, FaMinusCircle, FaTrash} from "react-icons/fa"
+
 
 // npx browserslist@latest --update-db - to update the browser
 function CartContainer() {
@@ -65,18 +67,18 @@ function CartContainer() {
 
       
         <button disabled={item.amount>=10} onClick={() => increase(item.id)} style={{color: "black" }}>
-          ➕
+          <FaPlusCircle/>
         </button>
         <button style={{ color: "black",fontWeight:"bold"}}>{item.amount}</button>
 
        
 
         <button disabled={item.amount<=1} onClick={() => decrease(item.id)}style={{ color: "black" }}>
-          ➖
+        <FaMinusCircle/>
         </button>
         <button onClick={() => remove(item.id)}style={{ color: "black" }}
         >
-          🗑
+          <FaTrash/>
         </button>
           </div>
       

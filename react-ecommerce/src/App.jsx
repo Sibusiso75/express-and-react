@@ -15,7 +15,7 @@ function App() {
   if (loading) {
     return (
       <div>
-        <ReactLoading type="spinningBubbles" color="gray" height={500} width={300}/>
+        <ReactLoading type="spokes" color="orange" height={500} width={300}/>
       </div>
     );
   }

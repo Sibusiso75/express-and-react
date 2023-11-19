@@ -2,7 +2,7 @@ import React from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { useGlobalContext } from "../ContextAndReducer/cartContext"
 import  "../cart.css"
-
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa"
 function Item(){
     const {id} = useParams()
     let navigate = useNavigate()
@@ -27,7 +27,7 @@ function Item(){
                      <div>
                      <span className="previousAndNext" onClick={()=>navigate(`/item/${item.id<=1?
         items.length:item.id>items.length?1:item.id-1}`)}>
-        ⬅
+        <FaChevronLeft/>
       </span>
         <img
           src={item.image}
@@ -36,7 +36,7 @@ function Item(){
         />
           <span className="previousAndNext" onClick={()=>navigate(`/item/${item.id<1?
         items.length:item.id>items.length-1?1:item.id+1}`)}>
-        ➡
+        <FaChevronRight/>
       </span>
         <div className="itemsAndButtons">
        
