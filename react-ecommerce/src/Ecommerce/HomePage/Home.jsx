@@ -2,7 +2,6 @@ import React from "react";
 import { useGlobalContext } from "../ContextAndReducer/cartContext";
 import "../cart.css";
 import { useNavigate } from "react-router-dom";
-import {FaArrowCircleLeft} from "react-icons/fa"
 function Home() {
   const {  items, searchTerm, setSearchTerm, addToCart} =
     useGlobalContext();
@@ -14,7 +13,6 @@ function Home() {
 
   return (
     <div>
-      <FaArrowCircleLeft/>
 
       <form onSubmit={submit}>
         <input
